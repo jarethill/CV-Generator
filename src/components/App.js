@@ -4,6 +4,7 @@ import GeneralInformation from './GeneralInformation';
 import Education from './Education';
 import Experience from './Experience';
 import '../styles/App.scss';
+import 'bootswatch/dist/flatly/bootstrap.min.css';
 
 class App extends Component {
     constructor() {
@@ -49,10 +50,6 @@ class App extends Component {
         this.setState({
             [property]: data,
         });
-
-        setTimeout(() => {
-            console.log(this.state);
-        }, 1000);
     }
     render() {
         const { general, education, experience } = this.state;
